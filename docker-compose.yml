@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  frontend:
+    container_name: biscuitsbuttonweb
+    build: ./the-button-web
+    restart: unless-stopped
+    depends_on:
+      - backend
+  backend:
+    container_name: biscuitsbuttonserver
+    build: ./the-button-server
+    restart: unless-stopped
+  tunnel:
+    container_name: cloudflared-tunnel
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}

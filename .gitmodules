@@ -1,0 +1,6 @@
+[submodule "the-button-web"]
+	path = the-button-web
+	url = https://github.com/jstnf/the-button-web
+[submodule "the-button-server"]
+	path = the-button-server
+	url = https://github.com/jstnf/the-button-server
