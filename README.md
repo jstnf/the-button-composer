@@ -14,15 +14,19 @@ Use the following instructions to run your own instance of The Button.
    
    In the configuration, create an entry for a public hostname of your choice. For its service, route to `http://biscuitsbuttonweb:3000`.
 3. Create a `.env` file from the example file. Replace the value for `CLOUDFLARE_TUNNEL_TOKEN` with the token from Cloudflare.
-4. Run the following to start the application:
+4. Build from the Docker compose.
    ```bash
    docker compose build --no-cache
-   docker compose up
    ```
-5. Once done, run the following to cleanup:
+5. Start the application.
+   ```bash
+   docker compose up -d
+   ```
+6. Once done, run the following to cleanup:
    ```bash
    docker compose down
-   docker image rm biscuits-button-frontend
-   docker image rm biscuits-button-backend
+   docker compose rm -f
+   docker image rm the-button-composer-frontend
+   docker image rm the-button-composer-backend
    docker image rm cloudflare/cloudflared
    ```
