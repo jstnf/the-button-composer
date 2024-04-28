@@ -12,7 +12,7 @@ Use the following instructions to run your own instance of The Button.
    ```
 2. Create a [Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/). Copy the tunnel token.
    
-   In the configuration, create an entry for a public hostname of your choice. For its service, route to `http://biscuitsbuttonweb:3000`.
+   In the configuration, create an entry for a public hostname of your choice. For its service, route to `http://biscuitsbutton-web:3000`.
 3. Create a `.env` file from the example file. Replace the value for `CLOUDFLARE_TUNNEL_TOKEN` with the token from Cloudflare.
 4. Build from the Docker compose.
    ```bash
