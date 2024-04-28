@@ -18,10 +18,14 @@ Use the following instructions to run your own instance of The Button.
    ```bash
    docker compose build --no-cache
    ```
+   
+   Alternatively, run `make build`.
 5. Start the application.
    ```bash
    docker compose up -d
    ```
+   
+   Alternatively, run `make up`.
 6. Once done, run the following to cleanup:
    ```bash
    docker compose down
@@ -30,3 +34,5 @@ Use the following instructions to run your own instance of The Button.
    docker image rm the-button-composer-backend
    docker image rm cloudflare/cloudflared
    ```
+   
+   Alternatively, run `make clean -i`.
