@@ -17,6 +17,7 @@ services:
       - SERVER_PORT=${SERVER_PORT}
       - SERVER_DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@biscuitsbutton-postgres:5432/${POSTGRES_DB}
       - BUTTON_EXPIRY=${BUTTON_EXPIRY}
+      - MILLIS_DEDUCTED_PER_PRESS=${MILLIS_DEDUCTED_PER_PRESS}
     volumes:
       - ./users.json:/app/users.json
   tunnel:
